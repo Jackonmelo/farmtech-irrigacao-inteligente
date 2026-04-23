@@ -1,79 +1,156 @@
-# FIAP - Faculdade de Informática e Administração Paulista
-# FarmTech Solutions - Irrigação Inteligente
-
-## Integrante:
-- Jackson Melo – RM572832
-
-## Orientadora:
-- Nicolly Candida Rodrigues Souza
-
-### Coordenador
-- Andre Godoi Chiovato
+# FIAP - Faculdade de Informática e Administração Paulista  
+## FarmTech Solutions - Sistema de Irrigação Inteligente (ESP32)
 
 ---
 
-## Descrição
+## 👨‍🎓 Integrante
+- Jackson Melo – RM572832  
 
-Este projeto tem como objetivo o desenvolvimento de um sistema de irrigação inteligente utilizando o microcontrolador ESP32, simulado na plataforma Wokwi. A solução proposta faz parte do contexto da startup fictícia FarmTech Solutions, que busca aplicar tecnologia para otimizar a produção agrícola.
+## 👩‍🏫 Orientadora
+- Nicolly Candida Rodrigues Souza  
 
-O sistema simula a coleta de dados agrícolas essenciais para tomada de decisão, utilizando sensores adaptados no ambiente virtual. Os níveis de nutrientes do solo (Nitrogênio, Fósforo e Potássio - NPK) são representados por botões digitais, permitindo simular estados binários (ativo/inativo). O pH do solo é representado por um sensor LDR (sensor de luz), que fornece dados analógicos, enquanto a umidade do solo é simulada através do sensor DHT22.
-
-Com base nesses dados, o sistema toma decisões automáticas para ativar ou desativar a irrigação, representada por um relé (bomba d’água). A lógica implementada considera condições específicas de umidade e qualidade do solo, permitindo simular um ambiente de agricultura de precisão.
-
-O projeto também abre possibilidade para integração com APIs externas (como dados climáticos) e análise de dados em R, ampliando o uso de conceitos de Internet das Coisas (IoT), automação e Data Science.
-
-O principal objetivo é demonstrar como tecnologias digitais podem ser aplicadas no agronegócio para reduzir desperdícios, melhorar a eficiência no uso da água e aumentar a produtividade.
+## 👨‍💼 Coordenador
+- Andre Godoi Chiovato  
 
 ---
 
-## Estrutura de pastas
+## 📌 Visão Geral
 
-- **.github**: Arquivos de configuração do GitHub  
-- **assets**: Imagens do projeto (ex: circuito do Wokwi)  
-- **config**: Arquivos de configuração  
-- **document**: Documentação do projeto  
-- **scripts**: Scripts auxiliares  
-- **src**: Código fonte do ESP32 (C/C++)  
-- **README.md**: Documentação principal do projeto  
+Este projeto apresenta a implementação de um sistema de irrigação inteligente utilizando o microcontrolador ESP32, com simulação realizada na plataforma Wokwi. A solução integra conceitos de Internet das Coisas (IoT), automação e monitoramento ambiental aplicados ao agronegócio.
+
+A proposta simula um cenário de agricultura de precisão, onde dados ambientais são coletados, processados e utilizados para tomada de decisão automatizada, visando otimizar o uso de recursos naturais e aumentar a eficiência produtiva.
 
 ---
 
-## Como executar o código
+## 🎯 Objetivo
 
-### Pré-requisitos:
-- Conta no Wokwi: https://wokwi.com  
-- Navegador web (Chrome, Edge, Safari)  
-- Conhecimento básico em Arduino / C++  
+Desenvolver um sistema capaz de:
 
-### Passo a passo:
-
-1. Acesse a plataforma Wokwi  
-2. Crie um novo projeto com ESP32  
-3. Copie o código disponível na pasta `/src` deste repositório  
-4. Monte o circuito conforme imagens na pasta `/assets`  
-5. Execute a simulação  
-6. Interaja com:
-   - Botões (NPK)
-   - Sensor LDR (pH simulado)
-   - Sensor DHT22 (umidade)
-
-7. Observe o acionamento do relé (bomba de irrigação)
+- Monitorar condições ambientais (temperatura e umidade)
+- Simular características do solo (pH e nutrientes)
+- Automatizar o acionamento de irrigação
+- Demonstrar aplicação prática de IoT no agronegócio
 
 ---
 
-## Histórico de lançamentos
+## ⚙️ Arquitetura do Sistema
 
-* 0.1.0 - 22/04/2026  
-    * Criação do projeto  
-    * Implementação da lógica de irrigação  
-    * Estrutura inicial do repositório  
+### 🔌 Componentes Utilizados
+
+- ESP32 (microcontrolador principal)
+- Sensor DHT22 (temperatura e umidade)
+- Sensor LDR (simulação de pH do solo)
+- 3 Botões (NPK - Nitrogênio, Fósforo e Potássio)
+- Módulo Relé (simulação da bomba de irrigação)
+- Resistor (pull-up para o DHT22)
 
 ---
 
-## Licença
+## 🧠 Lógica de Funcionamento
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+O sistema realiza leituras contínuas dos sensores e executa ações com base em regras pré-definidas.
 
-Este projeto segue o modelo acadêmico FIAP e está licenciado sob:
-Attribution 4.0 International (CC BY 4.0)
+### 📊 Entradas
+
+- Botões (NPK): indicam presença de nutrientes  
+- LDR: simula o pH do solo  
+- DHT22: mede temperatura e umidade  
+
+### 🔄 Processamento
+
+O valor do LDR é convertido para uma escala de pH (0 a 14), permitindo simular a condição do solo.
+
+### ⚡ Saída
+
+O relé é acionado automaticamente quando:
+
+- pH < 5.5 (solo ácido)  
+ou  
+- Temperatura > 30°C  
+
+---
+
+## 🌱 Aplicação no Agronegócio
+
+A solução representa um modelo de:
+
+- Agricultura de precisão  
+- Monitoramento inteligente do solo  
+- Automação de irrigação  
+- Redução do desperdício de água  
+
+---
+
+## 🧪 Simulação
+
+A simulação foi realizada na plataforma Wokwi.
+
+### ▶️ Acesso ao Projeto
+> Inserir aqui o link do Wokwi
+
+### 🧩 Interações
+
+- Pressionar botões → simula NPK  
+- Ajustar LDR → altera pH  
+- Alterar DHT22 → muda temperatura e umidade  
+- Relé → indica irrigação ativa  
+
+---
+
+## 📂 Estrutura do Repositório
+
+- assets/ → imagens do circuito  
+- src/ → código fonte  
+- diagram.json → circuito do Wokwi  
+- wokwi.toml → configuração do simulador  
+- libraries.txt → bibliotecas  
+- README.md → documentação  
+
+---
+
+## ▶️ Como Executar
+
+### Pré-requisitos
+
+- Conta no Wokwi  
+- Navegador atualizado  
+- Noções básicas de Arduino  
+
+### Passos
+
+1. Acessar o link do projeto  
+2. Executar a simulação  
+3. Interagir com sensores e botões  
+4. Monitorar dados no Serial  
+5. Verificar acionamento do relé  
+
+---
+
+## 📈 Resultados
+
+- Leitura correta dos sensores  
+- Resposta dos botões (NPK)  
+- Conversão do LDR para pH  
+- Acionamento automático da irrigação  
+
+---
+
+## 🚀 Possíveis Evoluções
+
+- Integração com APIs climáticas  
+- Dashboard de monitoramento  
+- Armazenamento em nuvem  
+- Sensores reais de solo  
+- Uso de Machine Learning  
+
+---
+
+## 📜 Licença
+
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+---
+
+## 📌 Considerações Finais
+
+O projeto demonstra, de forma prática, como IoT pode ser aplicada no agronegócio para otimizar recursos, reduzir desperdícios e apoiar decisões baseadas em dados.
