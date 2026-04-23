@@ -44,6 +44,9 @@ Desenvolver um sistema capaz de:
 - Módulo Relé (simulação da bomba de irrigação)
 - Resistor (pull-up para o DHT22)
 
+### ▶️ Acesso ao Projeto
+[https://wokwi.com/projects/SEU_LINK](https://wokwi.com/projects/462059657091953665)
+
 ---
 
 ## 🧠 Lógica de Funcionamento
