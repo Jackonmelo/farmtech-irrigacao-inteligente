@@ -1,71 +1,88 @@
 # FIAP - Faculdade de Informática e Administração Paulista
 
 <p align="center">
-<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
+<a href="https://www.fiap.com.br/">
+<img src="assets/logo-fiap.png" alt="FIAP" border="0" width=40% height=40%>
+</a>
 </p>
 
 <br>
 
-# Nome do projeto
+# FarmTech Solutions - Irrigação Inteligente
 
-## Nome do grupo
+## Integrante:
+- Jackson Melo – RM572832
 
-## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
+## Orientadora:
+- Nicolly Candida Rodrigues Souza
 
-## 👩‍🏫 Professores:
-### Tutor(a) 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
-### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
+### Coordenador
+- Andre Godoi Chiovato
 
+---
 
-## 📜 Descrição
+## Descrição
 
-*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+Este projeto tem como objetivo o desenvolvimento de um sistema de irrigação inteligente utilizando o microcontrolador ESP32, simulado na plataforma Wokwi. A solução proposta faz parte do contexto da startup fictícia FarmTech Solutions, que busca aplicar tecnologia para otimizar a produção agrícola.
 
+O sistema simula a coleta de dados agrícolas essenciais para tomada de decisão, utilizando sensores adaptados no ambiente virtual. Os níveis de nutrientes do solo (Nitrogênio, Fósforo e Potássio - NPK) são representados por botões digitais, permitindo simular estados binários (ativo/inativo). O pH do solo é representado por um sensor LDR (sensor de luz), que fornece dados analógicos, enquanto a umidade do solo é simulada através do sensor DHT22.
 
-## 📁 Estrutura de pastas
+Com base nesses dados, o sistema toma decisões automáticas para ativar ou desativar a irrigação, representada por um relé (bomba d’água). A lógica implementada considera condições específicas de umidade e qualidade do solo, permitindo simular um ambiente de agricultura de precisão.
 
-Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
+O projeto também abre possibilidade para integração com APIs externas (como dados climáticos) e análise de dados em R, ampliando o uso de conceitos de Internet das Coisas (IoT), automação e Data Science.
 
-- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+O principal objetivo é demonstrar como tecnologias digitais podem ser aplicadas no agronegócio para reduzir desperdícios, melhorar a eficiência no uso da água e aumentar a produtividade.
 
-- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
+---
 
-- <b>config</b>: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
+## Estrutura de pastas
 
-- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
+- **.github**: Arquivos de configuração do GitHub  
+- **assets**: Imagens do projeto (ex: circuito do Wokwi)  
+- **config**: Arquivos de configuração  
+- **document**: Documentação do projeto  
+- **scripts**: Scripts auxiliares  
+- **src**: Código fonte do ESP32 (C/C++)  
+- **README.md**: Documentação principal do projeto  
 
-- <b>scripts</b>: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
+---
 
-- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+## Como executar o código
 
-- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+### Pré-requisitos:
+- Conta no Wokwi: https://wokwi.com  
+- Navegador web (Chrome, Edge, Safari)  
+- Conhecimento básico em Arduino / C++  
 
-## 🔧 Como executar o código
+### Passo a passo:
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+1. Acesse a plataforma Wokwi  
+2. Crie um novo projeto com ESP32  
+3. Copie o código disponível na pasta `/src` deste repositório  
+4. Monte o circuito conforme imagens na pasta `/assets`  
+5. Execute a simulação  
+6. Interaja com:
+   - Botões (NPK)
+   - Sensor LDR (pH simulado)
+   - Sensor DHT22 (umidade)
 
+7. Observe o acionamento do relé (bomba de irrigação)
 
-## 🗃 Histórico de lançamentos
+---
 
-* 0.5.0 - XX/XX/2024
-    * 
-* 0.4.0 - XX/XX/2024
-    * 
-* 0.3.0 - XX/XX/2024
-    * 
-* 0.2.0 - XX/XX/2024
-    * 
-* 0.1.0 - XX/XX/2024
-    *
+## Histórico de lançamentos
 
-## 📋 Licença
+* 0.1.0 - 22/04/2026  
+    * Criação do projeto  
+    * Implementação da lógica de irrigação  
+    * Estrutura inicial do repositório  
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+---
 
+## Licença
+
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+
+Este projeto segue o modelo acadêmico FIAP e está licenciado sob:
+Attribution 4.0 International (CC BY 4.0)
