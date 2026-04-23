@@ -47,6 +47,8 @@ Desenvolver um sistema capaz de:
 ### ▶️ Acesso ao Projeto
 [https://wokwi.com/projects/SEU_LINK](https://wokwi.com/projects/462059657091953665)
 
+## 🎥 Vídeo do Projeto
+https://youtu.be/U2rSlIJpXOI
 ---
 
 ## 🧠 Lógica de Funcionamento
